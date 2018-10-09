@@ -1,8 +1,6 @@
 package com.websocket;
 
 
-import org.springframework.stereotype.Component;
-
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
@@ -20,7 +18,6 @@ import java.util.concurrent.ConcurrentHashMap;
  * @ServerEndpoint 可以把当前类变成websocket服务类
  */
 @ServerEndpoint("/websocket/{userno}")
-@Component
 public class WebSocketTest {
     //静态变量，用来记录当前在线连接数。应该把它设计成线程安全的。
     private static int onlineCount = 0;
